@@ -9,7 +9,6 @@
     name:
       - vector-{{ vector_version }}.rpm
     disable_gpg_check: True
-  notify: Start Vector service
 
 - name: Create vector config file
   ansible.builtin.template:
@@ -27,4 +26,3 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
     backup: true
-  notify: Start Vector service
